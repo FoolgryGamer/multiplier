@@ -3,11 +3,18 @@ FA = 0
 HA = 0
 stage = [13,9,6,4,3,2]
 
+# for i in range(32):
+#     if i >= 16:
+#         num[i] = 31-i
+#     else:
+#         num[i] = i+1
 for i in range(32):
-    if i >= 16:
-        num[i] = 31-i
+    if i < 15:
+        num[i] = i//3 + 1
+    elif i >= 15 and i <= 17:
+        num[i] = 6
     else:
-        num[i] = i+1
+        num[i] = (32-i) // 3 + 1
 print("origin num is")
 print(num)
 # stage 1
